@@ -1,11 +1,14 @@
 import json
 from gendiff.diff_generator import generate_diff
 
+
 def test_generate_diff():
-    with open('tests/fixtures/file1.json') as f1, open('tests/fixtures/file2.json') as f2:
+    with open(
+        'tests/fixtures/file1.json'
+    ) as f1, open('tests/fixtures/file2.json') as f2:
         first_data = json.load(f1)
         second_data = json.load(f2)
-        
+
         expected_diff = """{
   - follow: false
     host: hexlet.io
