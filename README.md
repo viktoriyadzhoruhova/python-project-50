@@ -24,4 +24,7 @@ gendiff file1.json file2.json
 [![asciicast](https://asciinema.org/a/667758.svg)](https://asciinema.org/a/667758
 
 ![CI](https://github.com/viktoriyadzhoruhova/python-project-50/actions/workflows/ci.yml/badge.svg)
-[![Coverage](https://api.codeclimate.com/v1/badges/4f4e9a3914e0c411d026/test_coverage)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4f4e9a3914e0c411d026/maintainability)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4f4e9a3914e0c411d026/test_coverage)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/test_coverage)
+
