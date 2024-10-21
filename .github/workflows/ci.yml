@@ -15,26 +15,32 @@ jobs:
         python-version: [3.8, 3.9, 3.10]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
-      run: poetry install
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-    - name: Run lint
-      run: make lint
+      - name: Install dependencies
+        run: poetry install
 
-    - name: Run tests
-      run: poetry run pytest
+      - name: Run lint
+        run: make lint
 
-    - name: Upload coverage to CodeClimate
-      run: |
-        pip install codeclimate-test-reporter
-        pytest --cov=gendiff --cov-report xml:coverage.xml
-        codeclimate-test-reporter < coverage.xml
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      - name: Run tests
+        run: poetry run pytest
+
+      - name: Upload coverage to CodeClimate
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: |
+          pip install codeclimate-test-reporter
+          codeclimate-test-reporter before-build
+          poetry run pytest --cov=gendiff --cov-report xml:coverage.xml
+          codeclimate-test-reporter after-build
