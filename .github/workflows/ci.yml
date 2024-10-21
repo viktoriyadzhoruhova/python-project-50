@@ -37,6 +37,5 @@ jobs:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: |
           pip install codeclimate-test-reporter
-          codeclimate-test-reporter before-build
           poetry run pytest --cov=gendiff --cov-report xml:coverage.xml
-          codeclimate-test-reporter after-build
+          codeclimate-test-reporter --file coverage.xml --token ${{ secrets.CC_TEST_REPORTER_ID }}
