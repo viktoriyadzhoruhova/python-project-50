@@ -5,9 +5,15 @@ description = ""
 authors = ["Viktoriya Dzhoruhova <viktodzho@gmail.com>"]
 readme = "README.md"
 
+packages = [
+    { include = "gendiff" }
+]
+
 [tool.poetry.dependencies]
 python = "^3.10"
 
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts:main"
 
 [build-system]
 requires = ["poetry-core"]
