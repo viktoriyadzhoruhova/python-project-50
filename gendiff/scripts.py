@@ -1,28 +1,5 @@
 import argparse
-from gendiff.file_reader import read_file
-from gendiff.diff_generator import generate_diff
-
-
-def generate_diff(file_path1, file_path2):
-    data1 = read_file(file_path1)
-    data2 = read_file(file_path2)
-
-    diff = {
-        key: (data1.get(key), data2.get(key))
-        for key in set(data1) | set(data2)
-    }
-
-    for key, (value1, value2) in diff.items():
-        if value1 != value2:
-            if value1 is None:
-                print(f"  + {key}: {value2}")
-            elif value2 is None:
-                print(f"  - {key}: {value1}")
-            else:
-                print(f"  - {key}: {value1}")
-                print(f"  + {key}: {value2}")
-        else:
-            print(f"    {key}: {value1}")
+from gendiff.diff_generator import generate_diff as generate_diff_data
 
 def main():
     parser = argparse.ArgumentParser(
@@ -34,8 +11,11 @@ def main():
 
     args = parser.parse_args()
 
-    diff = generate_diff(args.first_file, args.second_file)
-    print(diff)
+    # Теперь generate_diff возвращает строку, которую можно напечатать
+    diff = generate_diff_data(args.first_file, args.second_file)
+    if diff:  # Убираем None из вывода
+        print(diff)
 
 if __name__ == '__main__':
     main()
+

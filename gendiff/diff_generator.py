@@ -30,3 +30,4 @@ def format_value(value):
     elif isinstance(value, str):
         return value
     return str(value)
+
