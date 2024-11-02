@@ -1,5 +1,5 @@
-import json
 from gendiff.file_reader import read_file
+
 
 def generate_diff(file_path1, file_path2):
     data1 = read_file(file_path1)
@@ -21,6 +21,7 @@ def generate_diff(file_path1, file_path2):
 
     return "{\n" + "\n".join(diff) + "\n}"
 
+
 def format_value(value):
     """Форматирует значение для корректного вывода."""
     if value is None:
@@ -30,4 +31,3 @@ def format_value(value):
     elif isinstance(value, str):
         return value
     return str(value)
-
