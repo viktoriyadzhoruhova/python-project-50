@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="628600aa-b2e3-4d52-851a-fe8ed1c7dfda" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/python-project-50.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-project-50.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/hexlet_code-0.1.0-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/hexlet_code-0.1.0-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/hexlet_code-0.1.0.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/hexlet_code-0.1.0.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gendiff/diff_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/diff_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gendiff/file_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/file_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gendiff/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_gendiff.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_gendiff.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
