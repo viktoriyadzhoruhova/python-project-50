@@ -22,15 +22,20 @@ def main():
         choices=['stylish', 'plain', 'json'],
         default='stylish'
     )
+    parser.add_argument(
+        '-o', '--output',
+        help='Output to a file instead of stdout',
+        type=str
+    )
 
     args = parser.parse_args()
 
-    diff = generate_diff(
-        args.first_file,
-        args.second_file,
-        format_name=args.format
-    )
-    if diff:
+    diff = generate_diff(args.first_file, args.second_file, format_name=args.format)
+
+    if args.output:
+        with open(args.output, 'w', encoding='utf-8') as output_file:
+            output_file.write(diff + '\n')
+    else:
         print(diff)
 
 

@@ -1,37 +1,21 @@
-from gendiff.diff_generator import generate_diff
+import pytest
+from gendiff import generate_diff
 
 
-def test_generate_diff_json():
-    file1 = 'file1.json'
-    file2 = 'file2.json'
-
-    expected_output = """{
-  - follow: false
-    host: hexlet.io
-  - proxy: 123.234.53.22
-  - timeout: 50
-  + timeout: 20
-  + verbose: true
-}"""
-
-    generated_output = generate_diff(file1, file2)
-    print("Generated Output JSON:\n", generated_output)
-    assert generated_output == expected_output
+@pytest.mark.parametrize("file1, file2, formatter, expected", [
+    ("tests/fixtures/file3.json", "tests/fixtures/file4.json", 'plain',
+     "tests/fixtures/expected_result_plain.txt"),
+    ("tests/fixtures/file1.json", "tests/fixtures/file2.json", 'stylish',
+     "tests/fixtures/expected_result_nested.txt"),
+    ("tests/fixtures/file1.json", "tests/fixtures/file2.json", 'json',
+     "tests/fixtures/expected_result_nested.json"),
+])
+def test_generate_diff(file1, file2, formatter, expected):
+    diff = generate_diff(file1, file2, formatter)
+    expected_result = read_file(expected)
+    assert diff == expected_result
 
 
-def test_generate_diff_yaml():
-    file1 = 'file1.yml'
-    file2 = 'file2.yml'
-
-    expected_output = """{
-  - follow: false
-    host: hexlet.io
-  - proxy: 123.234.53.22
-  - timeout: 50
-  + timeout: 20
-  + verbose: true
-}"""
-
-    generated_output = generate_diff(file1, file2)
-    print("Generated Output YAML:\n", generated_output)
-    assert generated_output == expected_output
+def read_file(file_name):
+    with open(file_name, 'r') as file:
+        return file.read().strip()

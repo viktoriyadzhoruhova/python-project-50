@@ -34,7 +34,6 @@ def format_stylish(diff, depth=1):
     lines.append(f"{current_indent}}}")
     return '\n'.join(lines)
 
-
 def format_value(value):
     """Форматирует значение для корректного вывода."""
     if value is None:

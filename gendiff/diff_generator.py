@@ -1,6 +1,6 @@
 from gendiff.file_reader import read_file
 from gendiff.formatters.stylish import format_stylish
-
+from gendiff.formatters.plain import format_plain
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
     data1 = read_file(file_path1)
@@ -10,9 +10,10 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
 
     if format_name == 'stylish':
         return format_stylish(diff)
+    elif format_name == 'plain':
+        return format_plain(diff)
 
     raise ValueError(f"Unsupported format: {format_name}")
-
 
 def build_diff_tree(data1, data2):
     keys = sorted(set(data1.keys()) | set(data2.keys()))
