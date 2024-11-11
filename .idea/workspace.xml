@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="628600aa-b2e3-4d52-851a-fe8ed1c7dfda" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/python-project-50.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-project-50.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/hexlet_code-0.1.0-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/hexlet_code-0.1.0-py3-none-any.whl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/hexlet_code-0.1.0.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/hexlet_code-0.1.0.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file1.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file2.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gendiff/diff_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/diff_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gendiff/formatters/stylish.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/formatters/stylish.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gendiff/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nested_file1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nested_file1.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nested_file2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nested_file2.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gendiff/formatters/json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gendiff/formatters/plain.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/formatters/plain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_gendiff.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_gendiff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_gendiff_nested.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
