@@ -11,6 +11,7 @@ FORMATTERS = {
     'json': format_json
 }
 
+
 def generate_diff(file_path1, file_path2, formatter='stylish'):
     data1 = parse(file_path1)
     data2 = parse(file_path2)
@@ -18,6 +19,7 @@ def generate_diff(file_path1, file_path2, formatter='stylish'):
     diff = find_diff(data1, data2)
 
     return FORMATTERS[formatter](diff)
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -35,6 +37,7 @@ def main():
 
     diff = generate_diff(file_path1, file_path2, formatter)
     print(diff)
+
 
 if __name__ == '__main__':
     main()
