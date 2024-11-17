@@ -1,17 +1,15 @@
 import argparse
-
-from gendiff.formatters.plain import format_plain as plain
-from gendiff.formatters.stylish import format_stylish as stylish
-from gendiff.formatters.json_formatter import format_json as json_formatter
+from gendiff.formatters.plain import format_plain
+from gendiff.formatters.stylish import format_stylish
+from gendiff.formatters.json_formatter import format_json
 from gendiff.scripts.find_diff import find_diff
 from gendiff.scripts.parser import parse
 
 FORMATTERS = {
-    'stylish': stylish,
-    'plain': plain,
-    'json': json_formatter
+    'stylish': format_stylish,
+    'plain': format_plain,
+    'json': format_json
 }
-
 
 def generate_diff(file_path1, file_path2, formatter='stylish'):
     data1 = parse(file_path1)
@@ -20,7 +18,6 @@ def generate_diff(file_path1, file_path2, formatter='stylish'):
     diff = find_diff(data1, data2)
 
     return FORMATTERS[formatter](diff)
-
 
 def main():
     parser = argparse.ArgumentParser(
@@ -38,7 +35,6 @@ def main():
 
     diff = generate_diff(file_path1, file_path2, formatter)
     print(diff)
-
 
 if __name__ == '__main__':
     main()
