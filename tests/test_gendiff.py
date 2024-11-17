@@ -1,8 +1,10 @@
 import pytest
 from gendiff import generate_diff
 
+
 @pytest.mark.parametrize("file1, file2, formatter, expected", [
-    ("tests/fixtures/nested_file1.json", "tests/fixtures/nested_file2.json", 'plain',
+    ("tests/fixtures/nested_file1.json",
+     "tests/fixtures/nested_file2.json", 'plain',
      "tests/fixtures/expected_result_plain.txt"),
     ("tests/fixtures/file1.json", "tests/fixtures/file2.json", 'stylish',
      "tests/fixtures/expected_result_nested.txt"),
@@ -36,4 +38,3 @@ def read_file(file_name):
     """
     with open(file_name, 'r') as file:
         return file.read().strip()
-

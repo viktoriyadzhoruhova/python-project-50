@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="628600aa-b2e3-4d52-851a-fe8ed1c7dfda" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/gendiff/scripts/gendiff.py" beforeDir="false" afterPath="$PROJECT_DIR$/gendiff/scripts/gendiff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

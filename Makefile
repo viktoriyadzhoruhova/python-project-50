@@ -1,3 +1,5 @@
+.SILENT:
+
 install:
 	poetry install
 
@@ -10,8 +12,10 @@ publish:
 package-install:
 	python3 -m pip install dist/*.whl
 
+lint:
+	poetry run flake8
+
 test:
 	poetry run pytest
 
-lint:
-	poetry run flake8 gendiff
+check: lint test
