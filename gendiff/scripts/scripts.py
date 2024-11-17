@@ -30,7 +30,9 @@ def main():
 
     args = parser.parse_args()
 
-    diff = generate_diff(args.first_file, args.second_file, format_name=args.format)
+    diff = generate_diff(
+        args.first_file, args.second_file, format_name=args.format
+    )
 
     if args.output:
         with open(args.output, 'w', encoding='utf-8') as output_file:
