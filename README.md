@@ -3,6 +3,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/cb7aa6e6b19f122697e2/maintainability)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/maintainability)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cb7aa6e6b19f122697e2/test_coverage)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/test_coverage)
+
 # Python Project 50
 
 Project 50 is a command-line utility designed for comparing two configuration files. 
