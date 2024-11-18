@@ -1,26 +1,96 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/viktoriyadzhoruhova/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/viktoriyadzhoruhova/python-project-50/actions)
 
-# python-package
+[![Maintainability](https://api.codeclimate.com/v1/badges/cb7aa6e6b19f122697e2/maintainability)](https://codeclimate.com/github/viktoriyadzhoruhova/python-project-50/maintainability)
 
-[![Github Actions Status](https://github.com/hexlet-boilerplates/python-package/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-boilerplates/python-package/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/df66c0cbbeca7d822f23/maintainability)](https://codeclimate.com/github/hexlet-boilerplates/python-package/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/df66c0cbbeca7d822f23/test_coverage)](https://codeclimate.com/github/hexlet-boilerplates/python-package/test_coverage)
+# Python Project 50
 
-### Links
+Project 50 is a command-line utility designed for comparing two configuration files. 
+This tool is particularly useful for software developers and system administrators 
+who need to understand differences in configuration states between different environments. 
+It can compare both JSON and YAML file formats,
+providing the output in a variety of readable formats.
 
-This project was built using these tools:
 
-| Tool                                                                        | Description                                             |
-|-----------------------------------------------------------------------------|---------------------------------------------------------|
-| [poetry](https://python-poetry.org/)                                        | "Python dependency management and packaging made easy"  |
-| [Py.Test](https://pytest.org)                                               | "A mature full-featured Python testing tool"            |
-| [flake8](https://flake8.pycqa.org/)                                         | "Your tool for style guide enforcement" |
+## Installation
 
----
+Clone the repository and install the dependencies using `poetry`:
 
-[![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io/?utm_source=github&utm_medium=link&utm_campaign=python-package)
+```sh
+git clone https://github.com/viktoriyadzhoruhova/python-project-50
+cd python-project-50
+poetry install
+```
 
-This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet](https://hexlet.io/?utm_source=github&utm_medium=link&utm_campaign=python-package).
+## Usage
 
-See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
+To view help and usage information:
+
+```sh
+poetry run gendiff -h
+```
+
+### Example Usage
+
+To compare two files:
+
+```sh
+poetry run gendiff file1.json file2.yml
+```
+
+The output will be shown in a readable format. For example:
+
+```sh
+{
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
+}
+```
+
+## Command Line Options
+
+- `-h, --help` — Show help message and exit.
+- `-f FORMAT, --format FORMAT` — Set the output format (supported formats: `stylish`, `plain`, `json`).
+
+## Output Formats
+
+### Stylish (Default)
+The default format shows changes in a structured, tree-like view, highlighting additions, removals, and modifications.
+
+### Plain
+A straightforward text format for easily understanding what has changed, without any hierarchy:
+
+```sh
+Property 'common.follow' was added with value: false
+```
+
+### JSON
+Provides the difference in JSON format, suitable for further automated processing or integration with other tools.
+
+
+### Running Tests
+To run the test suite:
+
+```sh
+poetry run pytest
+```
+
+### Linting
+To check the code for linting issues:
+
+```sh
+make lint
+```
+
+## CI/CD
+The project uses GitHub Actions for continuous integration, ensuring code quality through automated testing and linting. 
+The status badges at the top reflect the current state of the latest build.
+
+## Demonstration
+See the tool in action:
+
+[![asciicast](https://asciinema.org/a/690376.svg)](https://asciinema.org/a/690376)
