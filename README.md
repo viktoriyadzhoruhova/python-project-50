@@ -16,20 +16,21 @@ providing the output in a variety of readable formats.
 
 ## Installation
 
-Clone the repository and install the dependencies using `poetry`:
+Clone the repository, build the package, and install it:
 
 ```sh
 git clone https://github.com/viktoriyadzhoruhova/python-project-50
 cd python-project-50
-poetry install
-```
+poetry build
+python3 -m pip install dist/*.whl
+
 
 ## Usage
 
 To view help and usage information:
 
 ```sh
-poetry run gendiff -h
+gendiff -h
 ```
 
 ### Example Usage
@@ -37,7 +38,7 @@ poetry run gendiff -h
 To compare two files:
 
 ```sh
-poetry run gendiff file1.json file2.yml
+gendiff file1.json file2.yml
 ```
 
 The output will be shown in a readable format. For example:
@@ -78,7 +79,7 @@ Provides the difference in JSON format, suitable for further automated processin
 To run the test suite:
 
 ```sh
-poetry run pytest
+make test
 ```
 
 ### Linting
